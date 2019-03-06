@@ -1,0 +1,11 @@
+<FilesMatch "\.(ini|sql)$">
+    Deny from all
+    Allow from localhost
+</FilesMatch>
+
+<Files phpinfo.php>
+    AuthName "Ne me pirate pas, gentil homme"
+    AuthType Basic
+    AuthUserFile /Users/johan/Documents/Ciasie/Securite/xvwa/.htpasswd
+    Require valid-user
+</Files>
